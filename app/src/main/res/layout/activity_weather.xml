@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:background="#499EEC"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".WeatherActivity"
+        android:orientation="vertical">
+
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="10dp" android:paddingLeft="10dp">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/sunny"
+                android:id="@+id/weatherIcon_mini"
+        />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/funshine_logo"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="vertical" android:paddingLeft="25dp" android:paddingTop="25dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today, May 1"
+                  android:textSize="25dp" android:textColor="#FFFFFF" android:id="@+id/weatherDate"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:gravity="bottom">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="100dp"
+                      android:text="78°" android:textColor="#FFFFFF" android:id="@+id/currentTemp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="30dp"
+                      android:text="64°" android:textColor="#FFFFFF" android:id="@+id/lowTemp"/>
+
+            <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:srcCompat="@drawable/sunny"
+                    android:id="@+id/weatherIcon"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:weightSum="3">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Portland, USA" android:textSize="20dp" android:layout_weight="2"
+                      android:textColor="#FFFFFF" android:id="@+id/cityCountry"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear"
+                      android:textSize="20dp" android:textColor="#FFFFFF" android:id="@+id/weatherDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_weather_reports"
+    >
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
